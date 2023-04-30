@@ -5,7 +5,61 @@
 <p>網站倉儲:<a href="https://github.com/mdecd2023/2a2-pj2ag11">https://github.com/mdecd2023/2a2-pj2ag11</a> </p>
 <p>網站網頁:<a href="https://mdecd2023.github.io/2a2-pj2ag11/">https://mdecd2023.github.io/2a2-pj2ag11/</a> </p>
 <p><a href="https://mde.tw/pjcopsim">https://mde.tw/pjcopsim</a> <br/><br/></p>
-<h1>w10</h1><h1>Note</h1>
+<h1>w10</h1>
+<div>有關 CoppeliaSim zmqRemoteAPI 問題</div>
+<div data-tid="messageBodyContainer">
+<div data-tid="messageBodyContent">
+<ol>
+<li>What is zmqRemoteAPI, and how does it relate to CoppeliaSim?</li>
+<li>How do you establish a connection between a Python script and CoppeliaSim using zmqRemoteAPI?</li>
+<li>What are some common use cases for zmqRemoteAPI in CoppeliaSim?</li>
+<li>What are the advantages and disadvantages of using zmqRemoteAPI compared to other methods of communication between Python and CoppeliaSim?</li>
+<li>Can you give an example of a project or task that you could complete using zmqRemoteAPI in CoppeliaSim?</li>
+</ol>
+<p>41023130&gt;1.</p>
+<p>A:<span>zmqRemoteAPI</span><span><span> </span></span><span>是</span><span><span> </span></span><span>CoppeliaSim</span><span><span> </span></span><span>提供的一個用於遠端控制仿真場景的工具，使用<span><span> </span></span><span>zmqRemoteAPI，能透過編程去控制CoppeliaSim中的機器人、傳感器等等，讓我們實現遠端控制及自動化操作，達到便利的效果。</span></span></p>
+<p>41023130&gt;2.</p>
+<p>A:<span>在</span><span><span> </span></span><span>CoppeliaSim</span><span><span> </span></span><span>模擬環境中，添加一個</span><span><span> </span></span><span>Remote</span><span><span> </span></span><span>API</span><span><span> </span></span><span>Server</span><span><span> </span></span><span>對象，並設定相應的通訊端口。 在</span><span><span> </span></span><span>Python</span><span><span> </span></span><span>程式中，使用</span><span><span> </span></span><span>zmqRemoteAPI</span><span><span> </span></span><span>提供的函式（例如</span><span><span> </span></span><span>simxStart、simxFinish、simxGetConnectionId</span><span><span> </span></span><span>等）建立與</span><span><span> </span></span><span>CoppeliaSim</span><span><span> </span></span><span>的連接，並設定適當的連接參數。</span></p>
+<p>41023130&gt;3.</p>
+<p>A:<span>zmqRemoteAPI</span><span> </span><span>在</span><span> </span><span>CoppeliaSim</span><span> </span><span>中的一些常見使用案例：</span></p>
+<p><span>控制機器人：使用</span><span><span> </span></span><span>zmqRemoteAPI</span><span><span> </span></span><span>可以通過</span><span><span> </span></span><span>Python</span><span><span> </span></span><span>程式控制</span><span><span> </span></span><span>CoppeliaSim</span><span><span> </span></span><span>中的機器人模型，例如移動機器人、控制關節運動、設定感測器等。</span></p>
+<div><span>场景设置：使用</span><span><span> </span></span><span>zmqRemoteAPI</span><span><span> </span></span><span>可以自動化設置</span><span><span> </span></span><span>CoppeliaSim</span><span><span> </span></span><span>中的場景，例如添加物體、設定物體的位置和屬性、設置環境條件等。</span></div>
+<div><span>效能測試：使用</span><span><span> </span></span><span>zmqRemoteAPI</span><span><span> </span></span><span>可以進行性能測試和評估，例如測試控制算法的運行速度、記憶體使用等。</span></div>
+<div><span>資料收集：使用</span><span><span> </span></span><span>zmqRemoteAPI</span><span><span> </span></span><span>可以從</span><span><span> </span></span><span>CoppeliaSim</span><span><span> </span></span><span>中獲取模擬環境中的資料，例如感測器數值、物體位置、碰撞狀態等，並用於後續的資料分析和處理。</span></div>
+<div><span>教育和研究：使用</span><span><span> </span></span><span>zmqRemoteAPI</span><span><span> </span></span><span>可以在教育和研究領域中進行虛擬實驗、模擬場景等，幫助學生和研究人員學習和研究機器人相關的知識和技能。</span></div>
+<div><span>簡而言之，zmqRemoteAPI</span><span><span> </span></span><span>在</span><span><span> </span></span><span>CoppeliaSim</span><span><span> </span></span><span>中常見的使用案例包括機器人控制、場景設置、效能測試、資料收集和教育研究等領域。</span></div>
+<div>
+<p>41023130&gt;4.</p>
+</div>
+<div>A:優點：共有3點，跨平台、高效、方便使用。</div>
+<div>1.<span>zmqRemoteAPI基於ZeroMQ庫實現，支持跨平台通信，因此可以輕鬆地在Windows、Mac和Linux等操作系統上使用。</span></div>
+<div>2.<span>zmqRemoteAPI的通信速度非常快，比其他通信方法如socket和pipe等更加高效，這對於需要快速傳輸大量數據的應用場景非常有利。</span></div>
+<div>3.<span>使用zmqRemoteAPI進行通信非常簡單，只需要在Python腳本中導入相關庫，創建一個ZeroMQ套接字並與CoppeliaSim建立連接即可。 設置靈活：zmqRemoteAPI的設置非常靈活，可以根據需要對其進行自定義設置，例如可以設置超時時間、心跳機制等。</span></div>
+<div>缺點:依賴褲太多，導致在使用前，需要安裝許多的東西，變得複雜</div>
+<div>還有，需要得到<span>CoppeliaSim</span><span> 的支持,因此需要許多相應設置。</span></div>
+<div></div>
+<div>41023130&gt;5.<br/><span></span></div>
+<div></div>
+<div>A:下面的程式碼是使用<span><span> </span></span><span>CoppeliaSim</span><span><span> </span></span><span>的</span><span><span> </span></span><span>zmqRemoteAPI</span><span><span> </span></span><span>控制機械臂自動抓取物體的</span><span><span> </span></span><span>Python</span><span><span> </span></span><span>程式</span></div>
+<div>
+<div class="line number1 index0 alt2"><code class="html plain"></code></div>
+<div class="line number1 index0 alt2"><code class="html plain">import sim import time # 定義物體的名稱和位置</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">object_name = 'Cuboid' object_position = [-0.2, 0.5, 0.1] # 連接 CoppeliaSim sim.simxFinish(-1) clientID = sim.simxStart('127.0.0.1', 19999, True, True, 5000, 5) </code></div>
+<div class="line number3 index2 alt2"><code class="html plain">if clientID != -1: print('Connected to remote API server') # 取得機械臂控制句柄</code></div>
+<div class="line number4 index3 alt1"><code class="html plain">errorCode, robot_handle = sim.simxGetObjectHandle(clientID, 'UR3', sim.simx_opmode_blocking) # 取得物體控制句柄</code></div>
+<div class="line number5 index4 alt2"><code class="html plain">errorCode, object_handle = sim.simxGetObjectHandle(clientID, object_name, sim.simx_opmode_blocking) # 移動機械臂到指定位置</code></div>
+<div class="line number6 index5 alt1"><code class="html plain">target_position = [-0.2, 0.5, 0.2] sim.simxSetObjectPosition(clientID, robot_handle, -1, target_position, sim.simx_opmode_blocking) # 機械臂夾取物體 sim.simxSetObjectParent(clientID, object_handle, robot_handle, True, sim.simx_opmode_blocking) # 移動機械臂到指定位置</code></div>
+<div class="line number7 index6 alt2"><code class="html plain">sim.simxSetObjectPosition(clientID, robot_handle, -1, object_position, sim.simx_opmode_blocking) # 釋放夾爪</code></div>
+<div class="line number8 index7 alt1"><code class="html plain">sim.simxSetObjectParent(clientID, object_handle, -1, True, sim.simx_opmode_blocking) # 移動機械臂到指定位置</code></div>
+<div class="line number9 index8 alt2"><code class="html plain">sim.simxSetObjectPosition(clientID, robot_handle, -1, target_position, sim.simx_opmode_blocking) # 斷開與 CoppeliaSim 的連接</code></div>
+<div class="line number10 index9 alt1"><code class="html plain">sim.simxFinish(clientID) else: print('Failed connecting to remote API server') time.sleep(1)</code></div>
+</div>
+<div>
+<p></p>
+</div>
+<div><span></span></div>
+</div>
+</div><h1>Note</h1>
 <h2>stud2.cycu.org</h2>
 <p>step 1：Login to https://mail.nfu.edu.tw - 查看登入 stud2.cycu.org 伺服器的密碼, 帳號為 cd+學號, 密碼為四個字元, 包括數字與小寫英文字母，並查詢 stud.cycu.org 中與帳號對應的近端 (給 127.0.0.1 使用, 9 開頭的 port) 與遠端 (給 stud.cycu.org, 8 開頭的 port) 埠號<br/>step 2：修改可攜 Python 3.10.6 start.bat, 蓋掉第三行後重新啟動, 目的希望將操作系統的命令搜尋路徑放在可攜目錄搜尋路徑之後.<br/>step 3：重新啟動可攜程式環境, 在其中一個命令列, ssh  cd+學號@stud2.cycu.org, 表示要使用 secure shell 遠端登入到 stud2.cycu.org, 這是一台 Linux 主機, 安裝 Ubuntu 22.04 Server.(若使用的網路連線協定並無 IPv6,  可將系統的 proxy 設為 140.130.17.4:3128 kmolab/kmolab)<br/>step 4：在 ssh 登入畫面, 以 ssh-keygen 建立 key pairs, .ssh/id_rsa 為 private key, id_rsa.pub 為 public key<br/>step 5：設法利用 Filezilla, 以 sftp 安全的(Secure)檔案(File)傳輸(Transmission)協定(Protocol), 與 stud.cycu.org 伺服器連結.<br/>step 6：利用  Filezilla sftp 取下 id_rsa.pub, 登錄至 Github 帳號下的 Setting - &gt;  SSH and GPG keys.<br/>step 7：對 server sftp 也可以利用  Filezilla portable, 以圖形介面完成. 而 ssh 也可以透過  putty.exe 執行遠端登入.<br/>step 8：接下來要下載  config 設定檔案,  以 sftp 放入 stud2.cycu.org 主機的 .ssh 目錄中.<br/>step 9：接下來要在  Ubuntu (也就是 stud.cycu.org 這台主機所安裝的操作系統) 中, 設定 .gitconfig, 總共包含三項設定: git config --global user.name "scrum-1", git config --global user.email  "scrum1@mde.tw"   以及 git config --global http.proxy http://p42.cycu.org:3128, 這三個設定必須在 ssh 登入畫面中執行, 設定完成檔案會存入帳號根目錄中的 .gitconfig  <br/>step 10：接著下載 server.py, 在 Windows 編輯 server.py, 將個人分配到的 9xxxx 埠號填入後存檔, 以 sftp 放入上列取下的倉儲根目錄.<br/>會使用的指令：<br/>pwd 代表 print working directory, clear - 清除螢幕<br/>cd - 更換目錄<br/>ls -l - 列出目錄詳細內容<br/>chmod u+x acp - 表示讓 user 可以 execute acp script (能夠讓使用者以 source acp 加上提交字串進行 git add, git commit, git push, 如何在 Windows 執行 acp.bat 加上提交字串.<br/>ps axo pid,comm,user | grep "python3" - 表示要找出使用 python3 執行的 process, 列出其 process id, command 以及 user<br/>kill -9 - 移除 python3 執行的 process id</p>
 <p>參考2a2-pj2ag2</p>
